@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:gravity="center_horizontal">
+
+
+
+
+
+<!--    CONTRAINT LAYOUT SEQUENCIAS-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+<!--        SEQUENCIAS ANTERIORES-->
+        <TextView
+            android:id="@+id/txtSequenciasAnteriores"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="Sequencias\nAnteriores"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtNumerosAcertados"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+
+            android:gravity="center"
+            android:text="Números\nAcertados"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/txtSequenciasAnteriores"
+            app:layout_constraintStart_toEndOf="@+id/txtSequenciasAnteriores"
+            app:layout_constraintTop_toTopOf="@+id/txtSequenciasAnteriores"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/txtPosicoesAcertadas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="40dp"
+            android:gravity="center"
+            android:text="Posições\nAcertadas"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/txtNumerosAcertados"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/txtNumerosAcertados"
+            app:layout_constraintTop_toTopOf="@+id/txtNumerosAcertados" />
+
+<!--        TENTADO 1-->
+        <TextView
+            android:id="@+id/txtTentado1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text=""
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="@+id/txtSequenciasAnteriores"
+            app:layout_constraintStart_toStartOf="@+id/txtSequenciasAnteriores"
+            app:layout_constraintTop_toBottomOf="@+id/txtSequenciasAnteriores" />
+
+        <TextView
+            android:id="@+id/txtAcertado1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text=""
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="@+id/txtNumerosAcertados"
+            app:layout_constraintStart_toStartOf="@+id/txtNumerosAcertados"
+            app:layout_constraintTop_toBottomOf="@+id/txtNumerosAcertados" />
+
+        <TextView
+            android:id="@+id/txtPosicao1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text=""
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="@+id/txtPosicoesAcertadas"
+            app:layout_constraintStart_toStartOf="@+id/txtPosicoesAcertadas"
+            app:layout_constraintTop_toBottomOf="@+id/txtPosicoesAcertadas" />
+
+<!--        TENTADO 2-->
+        <TextView
+            android:id="@+id/txtTentado2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text=""
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="@+id/txtSequenciasAnteriores"
+            app:layout_constraintStart_toStartOf="@+id/txtSequenciasAnteriores"
+            app:layout_constraintTop_toBottomOf="@+id/txtTentado1" />
+
+        <TextView
+            android:id="@+id/txtAcertado2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text=""
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="@+id/txtNumerosAcertados"
+            app:layout_constraintStart_toStartOf="@+id/txtNumerosAcertados"
+            app:layout_constraintTop_toBottomOf="@+id/txtAcertado1" />
+
+        <TextView
+            android:id="@+id/txtPosicao2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text=""
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="@+id/txtPosicoesAcertadas"
+            app:layout_constraintStart_toStartOf="@+id/txtPosicoesAcertadas"
+            app:layout_constraintTop_toBottomOf="@+id/txtPosicao1" />
+
+<!--        TENTADO 3-->
+        <TextView
+            android:id="@+id/txtTentado3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text=""
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="@+id/txtSequenciasAnteriores"
+            app:layout_constraintStart_toStartOf="@+id/txtSequenciasAnteriores"
+            app:layout_constraintTop_toBottomOf="@+id/txtTentado2" />
+
+        <TextView
+            android:id="@+id/txtAcertado3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text=""
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="@+id/txtNumerosAcertados"
+            app:layout_constraintStart_toStartOf="@+id/txtNumerosAcertados"
+            app:layout_constraintTop_toBottomOf="@+id/txtAcertado2" />
+
+        <TextView
+            android:id="@+id/txtPosicao3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text=""
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="@+id/txtPosicoesAcertadas"
+            app:layout_constraintStart_toStartOf="@+id/txtPosicoesAcertadas"
+            app:layout_constraintTop_toBottomOf="@+id/txtPosicao2" />
+
+
+<!--        TENTADO 4-->
+        <TextView
+            android:id="@+id/txtTentado4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text=""
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="@+id/txtSequenciasAnteriores"
+            app:layout_constraintStart_toStartOf="@+id/txtSequenciasAnteriores"
+            app:layout_constraintTop_toBottomOf="@+id/txtTentado3" />
+
+        <TextView
+            android:id="@+id/txtAcertado4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text=""
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="@+id/txtNumerosAcertados"
+            app:layout_constraintStart_toStartOf="@+id/txtNumerosAcertados"
+            app:layout_constraintTop_toBottomOf="@+id/txtAcertado3" />
+
+        <TextView
+            android:id="@+id/txtPosicao4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text=""
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="@+id/txtPosicoesAcertadas"
+            app:layout_constraintStart_toStartOf="@+id/txtPosicoesAcertadas"
+            app:layout_constraintTop_toBottomOf="@+id/txtPosicao3" />
+
+<!--        TENTADO 5-->
+
+        <TextView
+            android:id="@+id/txtTentado5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text=""
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="@+id/txtSequenciasAnteriores"
+            app:layout_constraintStart_toStartOf="@+id/txtSequenciasAnteriores"
+            app:layout_constraintTop_toBottomOf="@+id/txtTentado4" />
+
+        <TextView
+            android:id="@+id/txtAcertado5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text=""
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="@+id/txtNumerosAcertados"
+            app:layout_constraintStart_toStartOf="@+id/txtNumerosAcertados"
+            app:layout_constraintTop_toBottomOf="@+id/txtAcertado4" />
+
+        <TextView
+            android:id="@+id/txtPosicao5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text=""
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="@+id/txtPosicoesAcertadas"
+            app:layout_constraintStart_toStartOf="@+id/txtPosicoesAcertadas"
+            app:layout_constraintTop_toBottomOf="@+id/txtPosicao4" />
+
+
+<!--        TENTADO 6-->
+        <TextView
+            android:id="@+id/txtTentado6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text=""
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="@+id/txtSequenciasAnteriores"
+            app:layout_constraintStart_toStartOf="@+id/txtSequenciasAnteriores"
+            app:layout_constraintTop_toBottomOf="@+id/txtTentado5" />
+
+        <TextView
+            android:id="@+id/txtAcertado6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text=""
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="@+id/txtNumerosAcertados"
+            app:layout_constraintStart_toStartOf="@+id/txtNumerosAcertados"
+            app:layout_constraintTop_toBottomOf="@+id/txtAcertado5" />
+
+        <TextView
+            android:id="@+id/txtPosicao6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text=""
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="@+id/txtPosicoesAcertadas"
+            app:layout_constraintStart_toStartOf="@+id/txtPosicoesAcertadas"
+            app:layout_constraintTop_toBottomOf="@+id/txtPosicao5" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--    NUMEROS PARA DIGITAR-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        >
+
+        <EditText
+            android:id="@+id/edtNumero1"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:textSize="60sp"
+            android:hint="0"
+            android:gravity="center"
+            android:maxLength="1"
+            android:textStyle="bold"
+            android:layout_margin="10dp"
+            />
+
+        <EditText
+            android:id="@+id/edtNumero2"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:textSize="60sp"
+            android:hint="0"
+            android:gravity="center"
+            android:maxLength="1"
+            android:textStyle="bold"
+            android:layout_margin="10dp"
+            />
+
+        <EditText
+            android:id="@+id/edtNumero3"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:textSize="60sp"
+            android:hint="0"
+            android:gravity="center"
+            android:maxLength="1"
+            android:textStyle="bold"
+            android:layout_margin="10dp"
+            />
+
+        <EditText
+            android:id="@+id/edtNumero4"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:textSize="60sp"
+            android:hint="0"
+            android:gravity="center"
+            android:maxLength="1"
+            android:textStyle="bold"
+            android:layout_margin="10dp"
+            />
+
+    </LinearLayout>
+
+    <!--    BOTOES-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        >
+
+        <Button
+            android:id="@+id/btnLimpar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LIMPAR NUMEROS"
+            android:layout_margin="10dp"
+            />
+
+        <Button
+            android:id="@+id/btnJogar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ENTRAR SENHA"
+            android:layout_margin="10dp"
+            />
+
+
+    </LinearLayout>
+
+    <!--    TITULO EXPLICATIVO-->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:text="OBJETIVO!"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:text="A SENHA É UMA SEQUENCIA DE 4 NUMEROS DE 1 A 6, SEM NENHUM REPETIDO. TENTE ACERTAR A COMBINAÇÃO EM 6 TENTATIVAS USANDO AS DICAS DE NÚMEROS ACERTADOS E POSIÇÕES ACERTADAS."
+        />
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/idBanner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        ads:adSize="BANNER"
+        android:layout_marginTop="10dp"
+        ads:adUnitId="ca-app-pub-3940256099942544/6300978111">
+    </com.google.android.gms.ads.AdView>
+
+
+
+</LinearLayout>
